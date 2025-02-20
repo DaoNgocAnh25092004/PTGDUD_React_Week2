@@ -1,0 +1,43 @@
+.btn-delete {
+    color: var(--white-color);
+    background-color: var(--red-color);
+
+    &:hover {
+        background-color: rgba(255, 0, 0, 0.6);
+    }
+}
+.input {
+    width: 500px;
+    padding: 12px;
+    border: 2px solid rgb(232, 232, 232);
+    transition: border-color 0.2s ease-in-out;
+    border-radius: 25px;
+    margin-right: 10px;
+
+    &:focus-within {
+        border-color: #c4c3c3;
+        outline: none;
+        box-shadow: 0 0 0 0.2rem rgba(82, 82, 82, 0.25);
+    }
+}
+
+.list {
+    margin: 20px 0 0 20px;
+}
+
+.btn-delete-item {
+    cursor: pointer;
+    background-color: transparent;
+
+    svg {
+        margin-left: 20px;
+    }
+
+    &:hover {
+        svg {
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.1);
+            color: var(--red-color);
+        }
+    }
+}

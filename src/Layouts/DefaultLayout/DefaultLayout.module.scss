@@ -1,0 +1,6 @@
+
+.container-box > div:nth-child(2) {
+    flex: 1;
+    margin: 0 40px 0 calc(var(--sidebar-width) + 40px);
+    padding-top: 20px;
+}
