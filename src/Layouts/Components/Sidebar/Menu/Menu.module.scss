@@ -10,22 +10,25 @@
     background: #fff;
     border-radius: 16px;
     line-height: 15px;
+    border: 1px solid var(--primary-color);
+    transition: all 0.3s linear;
+
     &.active {
-        color: #1a1a1a;
-        background: #e8ebed;
+        color: white;
+        background: var(--primary-color);
     }
 
     &:hover {
         cursor: pointer;
-        color: #1a1a1a;
-        background: #e8ebed;
+        color: white;
+        background: var(--primary-color);
     }
 }
 
 .title {
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 600;
-    margin-top: 8px;
+    margin-top: 4px;
 }
 
 .icon {
