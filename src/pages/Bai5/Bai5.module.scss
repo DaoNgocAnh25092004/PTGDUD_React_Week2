@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid #000;
+        cursor: pointer;
+        transition: all 0.2s linear;
+    }
+
+    > div:hover {
+        background-color: #000;
+        color: #fff;
+    }
+}
+
+.content {
+    border: 1px solid #000;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.active {
+    background-color: #000;
+    color: #fff;
+}
