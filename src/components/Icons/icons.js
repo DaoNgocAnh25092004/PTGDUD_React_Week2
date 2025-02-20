@@ -39,7 +39,11 @@ export const Google = ({ width = '2.4rem', height = '2.4rem', className }) => (
     </svg>
 );
 
-export const Facebook = ({ width = '4rem', height = '4rem', className }) => (
+export const Facebook = ({
+    width = '2/4rem',
+    height = '2/4rem',
+    className,
+}) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         className={className}

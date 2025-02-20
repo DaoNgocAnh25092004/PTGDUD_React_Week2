@@ -15,6 +15,7 @@ function Button({
     rounded = false,
     small = false,
     large = false,
+    widthFull = false,
     className,
     leftIcon,
     rightIcon,
@@ -64,6 +65,7 @@ function Button({
         large,
         disabled,
         rounded,
+        'width-full': widthFull,
     });
 
     return (

@@ -13,10 +13,7 @@
     background-color: #fff;
     user-select: none;
     transition: all 0.3s ease-in-out;
-    + .wrapper {
-        margin-left: 0.8rem;
-    }
-
+    margin: 0.5rem;
     &.disabled {
         pointer-events: none;
         opacity: 0.5;
@@ -77,6 +74,9 @@
 .large {
     min-width: 15rem;
     padding: 1.4rem 15rem;
+}
+.width-full {
+    width: 100%;
 }
 
 // Icon

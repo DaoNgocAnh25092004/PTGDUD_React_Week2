@@ -10,6 +10,7 @@ import Bai3 from '~/pages/Bai3';
 import Bai4 from '~/pages/Bai4';
 import Bai5 from '~/pages/Bai5';
 import Bai6 from '~/pages/Bai6';
+import Bai7 from '~/pages/Bai7';
 
 // Routes public
 const publicRoutes = [
@@ -36,6 +37,10 @@ const publicRoutes = [
     {
         path: config.routes.bai6,
         component: Bai6,
+    },
+    {
+        path: config.routes.bai7,
+        component: Bai7,
     },
 ];
 
