@@ -43,7 +43,7 @@ function Bai4() {
     };
 
     //Xóa tất cả
-    const handlClearALL = () => {
+    const handleclearALL = () => {
         localStorage.clear('jobs');
         setJobs([]);
     };
@@ -62,7 +62,7 @@ function Bai4() {
             <Button leftIcon={<FontAwesomeIcon icon={faPlus} />} primary onClick={handleAdd}>
                 Add
             </Button>
-            <Button leftIcon={<FontAwesomeIcon icon={faTrash} />} className={cx('btn-delete')} primary onClick={handlClearALL}>
+            <Button leftIcon={<FontAwesomeIcon icon={faTrash} />} className={cx('btn-delete')} primary onClick={handleclearALL}>
                 Clear All
             </Button>
             <ul className={cx('list')}>
