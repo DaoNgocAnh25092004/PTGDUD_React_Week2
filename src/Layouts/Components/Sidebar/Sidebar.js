@@ -12,6 +12,9 @@ function Sidebar() {
             <Menu>
                 <MenuItem title="Bài 1" to={config.routes.bai1} />
                 <MenuItem title="Bài 2" to={config.routes.bai2} />
+                <MenuItem title="Bài 3" to={config.routes.bai3} />
+                <MenuItem title="Bài 4" to={config.routes.bai4} />
+                <MenuItem title="Bài 5" to={config.routes.bai5} />
             </Menu>
         </div>
     );
