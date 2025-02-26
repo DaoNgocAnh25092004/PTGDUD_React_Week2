@@ -6,6 +6,8 @@ const routes = {
     bai5: '/bai5',
     bai6: '/bai6',
     bai7: '/bai7',
+    bai8: '/bai8',
+    bai9: '/bai9',
 };
 
 export default routes;

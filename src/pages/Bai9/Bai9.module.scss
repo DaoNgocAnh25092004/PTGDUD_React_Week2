@@ -1,0 +1,47 @@
+.input {
+    width: 500px;
+    padding: 12px;
+    border: 2px solid rgb(232, 232, 232);
+    transition: border-color 0.2s ease-in-out;
+    border-radius: 25px;
+    margin-right: 10px;
+
+    &:focus-within {
+        border-color: #c4c3c3;
+        outline: none;
+        box-shadow: 0 0 0 0.2rem rgba(82, 82, 82, 0.25);
+    }
+}
+
+.box-input {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    > label {
+        width: 200px;
+    }
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+    th {
+        background-color: #f2f2f2;
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+}

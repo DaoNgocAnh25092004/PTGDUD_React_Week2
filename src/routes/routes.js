@@ -11,6 +11,8 @@ import Bai4 from '~/pages/Bai4';
 import Bai5 from '~/pages/Bai5';
 import Bai6 from '~/pages/Bai6';
 import Bai7 from '~/pages/Bai7';
+import Bai8 from '~/pages/Bai8';
+import Bai9 from '~/pages/Bai9';
 
 // Routes public
 const publicRoutes = [
@@ -41,6 +43,15 @@ const publicRoutes = [
     {
         path: config.routes.bai7,
         component: Bai7,
+    },
+    {
+        path: config.routes.bai8,
+        component: Bai8,
+    },
+
+    {
+        path: config.routes.bai9,
+        component: Bai9,
     },
 ];
 
