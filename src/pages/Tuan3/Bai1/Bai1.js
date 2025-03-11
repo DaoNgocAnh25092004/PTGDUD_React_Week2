@@ -177,7 +177,7 @@ function Bai1() {
                     </Button>
                 </aside>
 
-                <main>
+                <main className={cx('main')}>
                     <h1>Sorry, no results were found for "ngocanh"</h1>
                     <div>
                         <Image src={images.home} alt="home" />

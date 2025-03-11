@@ -65,6 +65,21 @@
     }
 }
 
+.pink.primary {
+    color: var(--white-color);
+    background-color: rgb(250, 72, 134);
+    border-color: rgb(250, 72, 134);
+    &:hover {
+        border-color: rgb(250, 72, 134);
+        color: rgb(250, 72, 134);
+        background: var(--white-color);
+    }
+}
+
+.pink.text {
+    color: rgb(250, 72, 134);
+}
+
 //Button sizes
 .small {
     min-width: 8.8rem;

@@ -20,10 +20,11 @@ import {
 import Tuan3 from '~/pages/Tuan3';
 import { Bai1 as B1_T3, Bai2 as B2_T3 } from '~/pages/Tuan3';
 
+import Tuan4 from '~/pages/Tuan4';
+
 // Routes public
 const publicRoutes = [
     // Trang home
-
     {
         path: config.routes.home,
         component: Home,
@@ -31,7 +32,6 @@ const publicRoutes = [
     },
 
     // Tuần 2
-
     {
         path: config.routes.week2,
         component: Tuan2,
@@ -74,7 +74,6 @@ const publicRoutes = [
     },
 
     // Tuần 3
-
     {
         path: config.routes.week3,
         component: Tuan3,
@@ -91,6 +90,13 @@ const publicRoutes = [
         path: config.routes.t3ex2,
         component: B2_T3,
         week: 3,
+    },
+
+    // Tuần 4
+    {
+        path: config.routes.week4,
+        component: Tuan4,
+        layout: null,
     },
 ];
 

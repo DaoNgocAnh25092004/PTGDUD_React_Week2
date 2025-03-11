@@ -24,7 +24,11 @@ function App() {
                                 key={index}
                                 path={route.path}
                                 element={
-                                    <Layout week={route.week}>
+                                    <Layout
+                                        {...(Layout !== Fragment && {
+                                            week: route.week,
+                                        })}
+                                    >
                                         <Page />
                                     </Layout>
                                 }

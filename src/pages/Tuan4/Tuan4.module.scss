@@ -1,0 +1,370 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.header {
+    height: 65px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.search {
+    border-radius: 4px;
+    background-color: #eeeeee;
+    padding: 5px 10px;
+    width: 300px;
+    position: relative;
+
+    > input {
+        border: none;
+        background-color: transparent;
+        width: 100%;
+        outline: none;
+        padding-left: 25px;
+    }
+    > svg {
+        position: absolute;
+        left: 5px;
+        top: 10px;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    > ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        > li {
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+                color: #f00;
+            }
+        }
+    }
+
+    > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        > div:first-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+            gap: 10px;
+            background-color: rgb(246, 227, 234);
+            color: rgb(250, 72, 134);
+            border-radius: 4px;
+        }
+    }
+}
+
+.main {
+    padding: 10px 40px;
+
+    > div:first-child {
+        display: flex;
+        gap: 15px;
+        > span:last-child {
+            color: rgb(250, 72, 134);
+        }
+    }
+}
+
+.box-info {
+    h1 {
+        margin: 20px 0;
+    }
+    .info-detail {
+        display: flex;
+        gap: 20px;
+
+        > div {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+    }
+}
+
+.box-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 100rem;
+    width: 23%;
+    overflow: hidden;
+    > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.recipe-container {
+    h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 15px;
+    }
+}
+
+.recipe-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.recipe-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    width: 23%;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    .recipe-img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
+
+    .recipe-info {
+        padding: 10px;
+        h3 {
+            font-size: 16px;
+            color: #333;
+        }
+        p {
+            color: #ff4d6d;
+            font-weight: bold;
+        }
+    }
+
+    .save-btn {
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: #ff4d6d;
+        cursor: pointer;
+        padding: 10px;
+
+        &:hover {
+            color: #e60050;
+        }
+    }
+    svg {
+        color: #ff4d6d;
+    }
+}
+
+.nav {
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+    > div {
+        display: inline-block;
+        margin-right: 20px;
+        padding: 10px 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    > div:first-child {
+        background-color: #fde3e9;
+        color: #ff4d6d;
+        font-weight: bold;
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.page,
+.arrow {
+    border: none;
+    background: #fff;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.page:hover,
+.arrow:hover {
+    background: #f1f1f1;
+}
+
+.active {
+    background: #ff4081;
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(255, 64, 129, 0.3);
+}
+
+.dots {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+}
+
+.box-pagination {
+    margin: 20px 0;
+    display: flex;
+    justify-content: end;
+}
+
+.footer {
+    background-color: #14171f;
+    color: white;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.box-footer {
+    display: flex;
+    align-items: space-between;
+    gap: 250px;
+
+    > div:first-child {
+        > div:first-child {
+            height: 80%;
+        }
+    }
+    > div:last-child {
+        display: flex;
+        gap: 150px;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 14px;
+        color: #bbb;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        font-size: 14px;
+        color: #bbb;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+
+    li:hover {
+        color: white;
+    }
+}
+
+.section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.subscribe {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.subscribe input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.subscribe button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe button:hover {
+    background-color: #e03572;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #333;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
