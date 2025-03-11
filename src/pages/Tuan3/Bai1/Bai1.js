@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 
-import styles from './Bai8.module.scss';
+import styles from './Bai1.module.scss';
 import Image from '~/components/Image';
 import images from '~/assets/images';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,7 +9,7 @@ import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
-function Bai8() {
+function Bai1() {
     return (
         <div className={cx('container')}>
             <header className={cx('header')}>
@@ -196,4 +196,4 @@ function Bai8() {
     );
 }
 
-export default Bai8;
+export default Bai1;

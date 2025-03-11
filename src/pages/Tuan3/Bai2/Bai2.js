@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
-import styles from './Bai9.module.scss';
+import styles from './Bai2.module.scss';
 import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
-function Bai9() {
+function Bai2() {
     const [money, setMoney] = useState(100);
     const [rate, setRate] = useState(10);
     const [goal, setGoal] = useState(200);
@@ -96,4 +96,4 @@ function Bai9() {
     );
 }
 
-export default Bai9;
+export default Bai2;

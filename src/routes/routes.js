@@ -4,58 +4,94 @@ import config from '~/config';
 // Layouts
 
 // Pages
-import Bai1 from '~/pages/Bai1';
-import Bai2 from '~/pages/Bai2';
-import Bai3 from '~/pages/Bai3';
-import Bai4 from '~/pages/Bai4';
-import Bai5 from '~/pages/Bai5';
-import Bai6 from '~/pages/Bai6';
-import Bai7 from '~/pages/Bai7';
-import Bai8 from '~/pages/Bai8';
-import Bai9 from '~/pages/Bai9';
+import Home from '~/pages/Home';
+
+import Tuan2 from '~/pages/Tuan2';
+import {
+    Bai1 as B1_T2,
+    Bai2 as B2_T2,
+    Bai3 as B3_T2,
+    Bai4 as B4_T2,
+    Bai5 as B5_T2,
+    Bai6 as B6_T2,
+    Bai7 as B7_T2,
+} from '~/pages/Tuan2';
+
+import Tuan3 from '~/pages/Tuan3';
+import { Bai1 as B1_T3, Bai2 as B2_T3 } from '~/pages/Tuan3';
 
 // Routes public
 const publicRoutes = [
+    // Trang home
+
     {
-        path: config.routes.bai1,
-        component: Bai1,
+        path: config.routes.home,
+        component: Home,
+        layout: null,
+    },
+
+    // Tuần 2
+
+    {
+        path: config.routes.week2,
+        component: Tuan2,
+        week: 2,
     },
     {
-        path: config.routes.bai2,
-        component: Bai2,
+        path: config.routes.t2ex1,
+        component: B1_T2,
+        week: 2,
     },
     {
-        path: config.routes.bai3,
-        component: Bai3,
+        path: config.routes.t2ex2,
+        component: B2_T2,
+        week: 2,
     },
     {
-        path: config.routes.bai4,
-        component: Bai4,
+        path: config.routes.t2ex3,
+        component: B3_T2,
+        week: 2,
     },
     {
-        path: config.routes.bai5,
-        component: Bai5,
+        path: config.routes.t2ex4,
+        component: B4_T2,
+        week: 2,
     },
     {
-        path: config.routes.bai6,
-        component: Bai6,
+        path: config.routes.t2ex5,
+        component: B5_T2,
+        week: 2,
     },
     {
-        path: config.routes.bai7,
-        component: Bai7,
+        path: config.routes.t2ex6,
+        component: B6_T2,
+        week: 2,
     },
     {
-        path: config.routes.bai8,
-        component: Bai8,
+        path: config.routes.t2ex7,
+        component: B7_T2,
+        week: 2,
+    },
+
+    // Tuần 3
+
+    {
+        path: config.routes.week3,
+        component: Tuan3,
+        week: 3,
     },
 
     {
-        path: config.routes.bai9,
-        component: Bai9,
+        path: config.routes.t3ex1,
+        component: B1_T3,
+        week: 3,
+    },
+
+    {
+        path: config.routes.t3ex2,
+        component: B2_T3,
+        week: 3,
     },
 ];
 
-// Routes private
-const privateRoutes = [];
-
-export { publicRoutes, privateRoutes };
+export { publicRoutes };

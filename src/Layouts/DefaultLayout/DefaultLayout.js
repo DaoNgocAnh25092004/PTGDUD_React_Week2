@@ -5,14 +5,12 @@ import styles from './DefaultLayout.module.scss';
 
 const cx = classNames.bind(styles);
 
-function DefaultLayout({ children }) {
+function DefaultLayout({ children, week }) {
     return (
         <>
             <div className={cx('container')}>
-                <div className={cx('container-box')}>
-                    <Sidebar />
-                    <div>{children}</div>
-                </div>
+                <Sidebar week={week} />
+                <div>{children}</div>
             </div>
         </>
     );

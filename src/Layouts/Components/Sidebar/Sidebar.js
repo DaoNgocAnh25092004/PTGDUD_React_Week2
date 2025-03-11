@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import PropTypes from 'prop-types';
 
 import styles from './Sidebar.module.scss';
 import Menu, { MenuItem } from './Menu';
@@ -6,22 +7,42 @@ import config from '~/config';
 
 const cx = classNames.bind(styles);
 
-function Sidebar() {
+function Sidebar({ week }) {
+    const renderMenuItems = () => {
+        switch (week) {
+            case 2:
+                return (
+                    <>
+                        <MenuItem title="Bài 1" to={config.routes.t2ex1} />
+                        <MenuItem title="Bài 2" to={config.routes.t2ex2} />
+                        <MenuItem title="Bài 3" to={config.routes.t2ex3} />
+                        <MenuItem title="Bài 4" to={config.routes.t2ex4} />
+                        <MenuItem title="Bài 5" to={config.routes.t2ex5} />
+                        <MenuItem title="Bài 6" to={config.routes.t2ex6} />
+                        <MenuItem title="Bài 7" to={config.routes.t2ex7} />
+                    </>
+                );
+            case 3:
+                return (
+                    <>
+                        <MenuItem title="Bài 1" to={config.routes.t3ex1} />
+                        <MenuItem title="Bài 2" to={config.routes.t3ex2} />
+                    </>
+                );
+            default:
+                return null;
+        }
+    };
+
     return (
         <div className={cx('sidebar')}>
-            <Menu>
-                {/* <MenuItem title="Bài 1" to={config.routes.bai1} /> */}
-                <MenuItem title="Bài 2" to={config.routes.bai2} />
-                <MenuItem title="Bài 3" to={config.routes.bai3} />
-                <MenuItem title="Bài 4" to={config.routes.bai4} />
-                <MenuItem title="Bài 5" to={config.routes.bai5} />
-                <MenuItem title="Bài 6" to={config.routes.bai6} />
-                <MenuItem title="Bài 7" to={config.routes.bai7} />
-                <MenuItem title="Bài 8" to={config.routes.bai8} />
-                <MenuItem title="Bài 9" to={config.routes.bai9} />
-            </Menu>
+            <Menu>{renderMenuItems()}</Menu>
         </div>
     );
 }
+
+Sidebar.propTypes = {
+    week: PropTypes.number.isRequired,
+};
 
 export default Sidebar;

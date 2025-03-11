@@ -1,13 +1,16 @@
 const routes = {
-    bai1: '/',
-    bai2: '/bai2',
-    bai3: '/bai3',
-    bai4: '/bai4',
-    bai5: '/bai5',
-    bai6: '/bai6',
-    bai7: '/bai7',
-    bai8: '/bai8',
-    bai9: '/bai9',
+    home: '/',
+    week2: '/week2',
+    t2ex1: '/week2/exercise1',
+    t2ex2: '/week2/exercise2',
+    t2ex3: '/week2/exercise3',
+    t2ex4: '/week2/exercise4',
+    t2ex5: '/week2/exercise5',
+    t2ex6: '/week2/exercise6',
+    t2ex7: '/week2/exercise7',
+    week3: '/week3',
+    t3ex1: '/week3/exercise1',
+    t3ex2: '/week3/exercise2',
 };
 
 export default routes;
