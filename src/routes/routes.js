@@ -22,6 +22,8 @@ import { Bai1 as B1_T3, Bai2 as B2_T3 } from '~/pages/Tuan3';
 
 import Tuan4 from '~/pages/Tuan4';
 
+import Tuan5 from '~/pages/Tuan5';
+
 // Routes public
 const publicRoutes = [
     // Trang home
@@ -96,6 +98,13 @@ const publicRoutes = [
     {
         path: config.routes.week4,
         component: Tuan4,
+        layout: null,
+    },
+
+    // Tuần 5
+    {
+        path: config.routes.week5,
+        component: Tuan5,
         layout: null,
     },
 ];
