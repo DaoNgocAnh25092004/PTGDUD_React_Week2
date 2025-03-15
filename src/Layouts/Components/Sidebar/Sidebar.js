@@ -34,6 +34,7 @@ function Sidebar({ week }) {
                     <>
                         <MenuItem title="Bài 1" to={config.routes.t5ex1} />
                         <MenuItem title="Bài 2" to={config.routes.t5ex2} />
+                        <MenuItem title="Bài 3" to={config.routes.t5ex3} />
                     </>
                 );
             default:

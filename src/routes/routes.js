@@ -23,7 +23,7 @@ import { Bai1 as B1_T3, Bai2 as B2_T3 } from '~/pages/Tuan3';
 import Tuan4 from '~/pages/Tuan4';
 
 import Tuan5 from '~/pages/Tuan5';
-import { Bai1 as B1_T5, Bai2 as B2_T5 } from '~/pages/Tuan5';
+import { Bai1 as B1_T5, Bai2 as B2_T5, Bai3 as B3_T5 } from '~/pages/Tuan5';
 
 // Routes public
 const publicRoutes = [
@@ -116,6 +116,11 @@ const publicRoutes = [
     {
         path: config.routes.t5ex2,
         component: B2_T5,
+        week: 5,
+    },
+    {
+        path: config.routes.t5ex3,
+        component: B3_T5,
         week: 5,
     },
 ];

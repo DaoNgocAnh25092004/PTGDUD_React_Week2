@@ -16,6 +16,7 @@ const routes = {
     week5: '/week5',
     t5ex1: '/week5/exercise1',
     t5ex2: '/week5/exercise2',
+    t5ex3: '/week5/exercise3',
 };
 
 export default routes;
