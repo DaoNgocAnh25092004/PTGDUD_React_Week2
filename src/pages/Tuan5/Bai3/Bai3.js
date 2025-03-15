@@ -1,4 +1,4 @@
-import { useReducer, useRef } from 'react';
+import { useReducer, useState, useCallback, useMemo, useRef } from 'react';
 import classNames from 'classnames/bind';
 
 import styles from './Bai3.module.scss';
@@ -33,40 +33,55 @@ function reducer(state, action) {
 
 function Bai3() {
     const [state, dispatch] = useReducer(reducer, initialState);
-    const inputRef = useRef(null);
+    const [inputValue, setInputValue] = useState('');
+    const inputRef = useRef();
 
-    const handleAddTask = () => {
-        const task = inputRef.current.value.trim();
+    const handleAddTask = useCallback(() => {
+        const task = inputValue.trim();
         if (task) {
             dispatch({ type: ADD_TASK, payload: task });
-            inputRef.current.value = '';
+            setInputValue('');
+            inputRef.current.focus();
         }
-    };
+        console.log('Added Task:', task);
+    }, [inputValue]);
+
+    const taskCount = useMemo(() => {
+        console.log('Re-render');
+        return state.tasks.length;
+    }, [state.tasks]);
 
     return (
         <div>
             <h1 className={cx('title')}>Quản lý công việc</h1>
+            <p className={cx('task-count')}>Số công việc: {taskCount}</p>
+
             <input
-                className={cx('input')}
                 ref={inputRef}
+                className={cx('input')}
                 type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
                 placeholder="Nhập công việc..."
             />
             <Button primary onClick={handleAddTask}>
                 Thêm
             </Button>
+
             <ul className={cx('list-task')}>
                 {state.tasks.map((task, index) => (
                     <li key={index}>
                         {task}
                         <FontAwesomeIcon
                             icon={faXmark}
-                            onClick={() =>
+                            className={cx('delete-icon')}
+                            onClick={() => {
                                 dispatch({
                                     type: REMOVE_TASK,
                                     payload: index,
-                                })
-                            }
+                                });
+                                console.log(`Deleted Task: ${task}`);
+                            }}
                         />
                     </li>
                 ))}

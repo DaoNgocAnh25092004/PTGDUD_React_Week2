@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './Button.module.scss';
+import { memo } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -32,6 +33,8 @@ function Button({
         onClick,
         ...passProps,
     };
+
+    console.log('Button re-render');
 
     //Kiểm tra xem nếu disabled = true thì sẽ xóa đi props onClick
     if (disabled) {
@@ -97,4 +100,4 @@ Button.propTypes = {
     onClick: PropTypes.func,
 };
 
-export default Button;
+export default memo(Button);
