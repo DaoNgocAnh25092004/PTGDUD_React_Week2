@@ -15,6 +15,7 @@ function Home() {
                 <MenuItem title="Tuần 3" to={config.routes.week3} />
                 <MenuItem title="Tuần 4" to={config.routes.week4} />
                 <MenuItem title="Tuần 5" to={config.routes.week5} />
+                <MenuItem title="Tuần 6" to={config.routes.week6} />
             </Menu>
         </div>
     );

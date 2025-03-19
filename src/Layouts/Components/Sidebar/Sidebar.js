@@ -37,6 +37,12 @@ function Sidebar({ week }) {
                         <MenuItem title="Bài 3" to={config.routes.t5ex3} />
                     </>
                 );
+            case 6:
+                return (
+                    <>
+                        <MenuItem title="Bài 1" to={config.routes.t6ex1} />
+                    </>
+                );
             default:
                 return null;
         }
