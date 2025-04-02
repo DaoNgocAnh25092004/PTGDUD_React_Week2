@@ -1,0 +1,7 @@
+.header {
+    grid-area: header;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    height: 60px;
+    width: calc(100vw - 270px);
+}
