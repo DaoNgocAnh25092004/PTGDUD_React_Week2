@@ -80,6 +80,16 @@
     color: rgb(250, 72, 134);
 }
 
+.pink.outline {
+    color: rgb(250, 72, 134);
+    border-color: currentColor;
+
+    &:hover {
+        border-color: currentColor;
+        background-color: rgb(250, 72, 134, 0.06);
+    }
+}
+
 //Button sizes
 .small {
     min-width: 8.8rem;

@@ -20,6 +20,12 @@ const routes = {
     week6: '/week6',
     t6ex1: '/week6/exercise1',
     week7: '/week7',
+    dashboard: '/week7/dashboard',
+    project: '/week7/project',
+    teams: '/week7/teams',
+    analytics: '/week7/analytics',
+    messages: '/week7/message',
+    integrations: '/week7/integrations',
 };
 
 export default routes;

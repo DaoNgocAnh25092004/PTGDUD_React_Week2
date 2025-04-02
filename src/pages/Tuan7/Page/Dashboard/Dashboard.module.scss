@@ -1,0 +1,87 @@
+.title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+
+    svg {
+        color: #e03572;
+    }
+    p {
+        font-weight: bold;
+    }
+}
+
+.title > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.img-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100rem;
+    border: 1px solid #ccc;
+}
+
+.box-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    p {
+        font-weight: bold;
+    }
+}
+
+.box-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border: 1px solid #ccc;
+}
+
+th:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40.4px;
+}
+
+table tr:nth-child(even) {
+    background-color: white;
+}
+
+th span {
+    color: #626262;
+    font-size: 15px;
+}
+
+.date {
+    color: #ccc;
+}
+
+.status-new {
+    background-color: #f3f2f2;
+    color: rgb(93 188 255);
+    padding: 2px 8px;
+    border-radius: 25px;
+}
+
+.status-in-progress {
+    background-color: #f8f6d8;
+    color: rgb(159, 161, 43);
+    padding: 2px 8px;
+    border-radius: 25px;
+}
+
+.status-completed {
+    background-color: #ccf7de;
+    color: rgb(66, 139, 91);
+    padding: 2px 8px;
+    border-radius: 25px;
+}

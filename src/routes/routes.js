@@ -2,6 +2,7 @@
 import config from '~/config';
 
 // Layouts
+import Tuan7Layout from '~/pages/Tuan7/Tuan7Layout';
 
 // Pages
 import Home from '~/pages/Home';
@@ -29,6 +30,12 @@ import Tuan6 from '~/pages/Tuan6';
 import { Bai1 as B1_T6 } from '~/pages/Tuan6';
 
 import Tuan7 from '~/pages/Tuan7';
+import Dashboard from '~/pages/Tuan7/Page/Dashboard';
+import Project from '~/pages/Tuan7/Page/Project';
+import Teams from '~/pages/Tuan7/Page/Teams';
+import Analytics from '~/pages/Tuan7/Page/Analytics';
+import Messages from '~/pages/Tuan7/Page/Messages';
+import Integrations from '~/pages/Tuan7/Page/Integrations';
 
 // Routes public
 const publicRoutes = [
@@ -145,6 +152,49 @@ const publicRoutes = [
     {
         path: config.routes.week7,
         component: Tuan7,
+        layout: Tuan7Layout,
+        week: 7,
+    },
+
+    {
+        path: config.routes.dashboard,
+        component: Dashboard,
+        layout: Tuan7Layout,
+        week: 7,
+    },
+
+    {
+        path: config.routes.project,
+        component: Project,
+        layout: Tuan7Layout,
+        week: 7,
+    },
+
+    {
+        path: config.routes.teams,
+        component: Teams,
+        layout: Tuan7Layout,
+        week: 7,
+    },
+
+    {
+        path: config.routes.analytics,
+        component: Analytics,
+        layout: Tuan7Layout,
+        week: 7,
+    },
+
+    {
+        path: config.routes.messages,
+        component: Messages,
+        layout: Tuan7Layout,
+        week: 7,
+    },
+
+    {
+        path: config.routes.integrations,
+        component: Integrations,
+        layout: Tuan7Layout,
         week: 7,
     },
 ];

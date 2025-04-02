@@ -1,49 +1,29 @@
 import classNames from 'classnames/bind';
 import React, { useEffect, useState } from 'react';
-import DataTable from 'datatables.net-react';
-import DT from 'datatables.net-dt';
-import 'datatables.net-select-dt';
 
-import styles from './Content.module.scss';
+import styles from './Overview.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCaretUp,
     faCartShopping,
     faDollar,
     faLayerGroup,
-    faNewspaper,
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
 
-import Table from './Component/Table/Table';
 const cx = classNames.bind(styles);
 
-DataTable.use(DT);
-
-function Content() {
+function Overview() {
     const [overview, setOverview] = useState([]);
-    const [table, setTable] = useState([]);
 
     useEffect(() => {
         fetch('https://67eca9a6aa794fb3222e5fbe.mockapi.io/Overview')
             .then((res) => res.json())
             .then((data) => setOverview(data));
-
-        fetch('https://67eca9a6aa794fb3222e5fbe.mockapi.io/user')
-            .then((res) => res.json())
-            .then((data) => {
-                const statuses = ['New', 'In-progress', 'Completed'];
-                data.forEach((item) => {
-                    item.status =
-                        statuses[Math.floor(Math.random() * statuses.length)];
-                });
-
-                setTable(data);
-            });
     }, []);
 
     return (
-        <div className={cx('content')}>
+        <div className={cx('overview')}>
             <div className={cx('title')}>
                 <p>
                     <FontAwesomeIcon icon={faLayerGroup} />
@@ -75,17 +55,8 @@ function Content() {
                     );
                 })}
             </div>
-
-            <div className={cx('title', 'title-table')}>
-                <p>
-                    <FontAwesomeIcon icon={faNewspaper} />
-                </p>
-                <p>Detailed report</p>
-            </div>
-
-            <Table data={table} />
         </div>
     );
 }
 
-export default Content;
+export default Overview;
