@@ -1,5 +1,7 @@
 import classNames from 'classnames/bind';
 import { useEffect, useState } from 'react';
+import { DataTable } from 'primereact/datatable';
+import { Column } from 'primereact/column';
 
 import styles from './Content.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,21 +9,20 @@ import {
     faCaretUp,
     faCartShopping,
     faDollar,
+    faEdit,
     faLayerGroup,
+    faNewspaper,
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
 function Content() {
     const [overview, setOverview] = useState([]);
-    console.table(overview);
+    const [table, setTable] = useState([]);
 
-    useEffect(() => {
-        fetch('https://67eca9a6aa794fb3222e5fbe.mockapi.io/Overview')
-            .then((res) => res.json())
-            .then((data) => setOverview(data));
-    }, []);
+    console.table(overview);
 
     return (
         <div className={cx('content')}>
@@ -55,6 +56,62 @@ function Content() {
                     );
                 })}
             </div>
+
+            <div className={cx('title')}>
+                <p>
+                    <FontAwesomeIcon icon={faNewspaper} />
+                </p>
+                <p>Detailed report</p>
+            </div>
+
+            <DataTable
+                value={table.slice(0, 3)}
+                showGridlines
+                tableStyle={{ minWidth: '50rem' }}
+                rowClassName={() => 'no-background'}
+                headerStyle={{ backgroundColor: '#f5f5f5' }}
+            >
+                <Column
+                    body={() => (
+                        <div className={cx('box-check')}>
+                            <input type="checkbox" />
+                        </div>
+                    )}
+                ></Column>
+                <Column
+                    header="CUSTOMER NAME"
+                    body={(rowData) => (
+                        <div className={cx('box-user')}>
+                            <Image
+                                className={cx('img-avatar')}
+                                src={rowData.img}
+                                alt={rowData.name}
+                            />
+                            <p>{rowData.name}</p>
+                        </div>
+                    )}
+                ></Column>
+                <Column field="company" header="COMPANY"></Column>
+                <Column field="orderValue" header="ORDER VALUE"></Column>
+                <Column
+                    field="orderDate"
+                    header="ORDER DATE"
+                    body={(rowData) => {
+                        const formattedDate = new Date(
+                            rowData.orderDate,
+                        ).toLocaleDateString();
+                        return <span>{formattedDate}</span>;
+                    }}
+                ></Column>
+
+                <Column
+                    body={() => (
+                        <div className={cx('box-check')}>
+                            <FontAwesomeIcon icon={faEdit} />{' '}
+                        </div>
+                    )}
+                ></Column>
+            </DataTable>
         </div>
     );
 }
