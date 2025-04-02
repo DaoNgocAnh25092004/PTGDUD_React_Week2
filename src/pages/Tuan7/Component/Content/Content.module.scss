@@ -82,19 +82,19 @@
     }
 
     > div:not(:first-child) {
-        background-color: rgb(220, 237, 245);
+        background-color: #eff6ff;
 
         .overview-left {
             width: 35px;
             height: 35px;
-            border: 1px solid blue;
+            border: 1px solid rgb(93 188 255);
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 4px;
             svg {
                 padding: 8px;
-                color: blue;
+                color: rgb(93 188 255);
             }
         }
     }
@@ -121,4 +121,58 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+tr > th,
+tr > td {
+    border: none;
+}
+
+tr {
+    border: none;
+}
+
+table {
+    border: 1px solid #ccc;
+}
+
+th:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40.4px;
+}
+
+table tr:nth-child(even) {
+    background-color: white;
+}
+
+th span {
+    color: #626262;
+    font-size: 15px;
+}
+
+.date {
+    color: #ccc;
+}
+
+.status-new {
+    background-color: #f3f2f2;
+    color: rgb(93 188 255);
+    padding: 2px 8px;
+    border-radius: 25px;
+}
+
+.status-in-progress {
+    background-color: #f8f6d8;
+    color: rgb(159, 161, 43);
+    padding: 2px 8px;
+    border-radius: 25px;
+}
+
+.status-completed {
+    background-color: #ccf7de;
+    color: rgb(66, 139, 91);
+    padding: 2px 8px;
+    border-radius: 25px;
 }

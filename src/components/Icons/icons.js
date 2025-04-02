@@ -40,8 +40,8 @@ export const Google = ({ width = '2.4rem', height = '2.4rem', className }) => (
 );
 
 export const Facebook = ({
-    width = '2/4rem',
-    height = '2/4rem',
+    width = '2.4rem',
+    height = '2.4rem',
     className,
 }) => (
     <svg
