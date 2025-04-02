@@ -17,6 +17,7 @@ const images = {
     star4: require('~/assets/images/Star/star4.png'),
     star5: require('~/assets/images/Star/star5.png'),
     home: require('~/assets/images/home.png'),
+    logo7: require('~/assets/images/logo-tuan7.png'),
 };
 
 export default images;
