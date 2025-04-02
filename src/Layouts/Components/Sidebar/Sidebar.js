@@ -43,16 +43,18 @@ function Sidebar({ week }) {
                         <MenuItem title="Bài 1" to={config.routes.t6ex1} />
                     </>
                 );
+            case 7:
+                return null;
             default:
                 return null;
         }
     };
 
-    return (
+    return week !== 7 ? (
         <div className={cx('sidebar')}>
             <Menu>{renderMenuItems()}</Menu>
         </div>
-    );
+    ) : null;
 }
 
 Sidebar.propTypes = {

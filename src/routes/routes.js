@@ -28,6 +28,8 @@ import { Bai1 as B1_T5, Bai2 as B2_T5, Bai3 as B3_T5 } from '~/pages/Tuan5';
 import Tuan6 from '~/pages/Tuan6';
 import { Bai1 as B1_T6 } from '~/pages/Tuan6';
 
+import Tuan7 from '~/pages/Tuan7';
+
 // Routes public
 const publicRoutes = [
     // Trang home
@@ -137,6 +139,13 @@ const publicRoutes = [
         path: config.routes.t6ex1,
         component: B1_T6,
         week: 6,
+    },
+
+    // Tuần 7
+    {
+        path: config.routes.week7,
+        component: Tuan7,
+        week: 7,
     },
 ];
 
