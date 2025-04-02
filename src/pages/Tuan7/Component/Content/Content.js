@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import React, { useEffect, useState } from 'react';
 import DataTable from 'datatables.net-react';
 import DT from 'datatables.net-dt';
+import 'datatables.net-select-dt';
 
 import styles from './Content.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,15 +15,14 @@ import {
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
 
-import Image from '~/components/Image';
-
+import Table from './Component/Table/Table';
 const cx = classNames.bind(styles);
+
 DataTable.use(DT);
 
 function Content() {
     const [overview, setOverview] = useState([]);
     const [table, setTable] = useState([]);
-    console.log(table.slice(0, 1));
 
     useEffect(() => {
         fetch('https://67eca9a6aa794fb3222e5fbe.mockapi.io/Overview')
@@ -76,21 +76,14 @@ function Content() {
                 })}
             </div>
 
-            <div className={cx('title')}>
+            <div className={cx('title', 'title-table')}>
                 <p>
                     <FontAwesomeIcon icon={faNewspaper} />
                 </p>
                 <p>Detailed report</p>
             </div>
 
-            <DataTable
-                data={table.slice(0, 4)}
-                options={{
-                    paging: true,
-                    searching: false,
-                    ordering: false,
-                }}
-            />
+            <Table data={table} />
         </div>
     );
 }

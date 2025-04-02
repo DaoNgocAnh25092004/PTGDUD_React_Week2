@@ -22,6 +22,10 @@
     }
 }
 
+.title-table {
+    margin-bottom: 0px;
+}
+
 .list-overview {
     display: flex;
     justify-content: center;
@@ -121,15 +125,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-tr > th,
-tr > td {
-    border: none;
-}
-
-tr {
-    border: none;
 }
 
 table {
