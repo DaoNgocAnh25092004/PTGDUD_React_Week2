@@ -5,13 +5,13 @@ import 'datatables.net-select-dt';
 
 import './Table.css';
 import EditTable from '~/components/EditTable';
+import images from '~/assets/images';
 
 DataTable.use(DT);
 
-function Table({ data }) {
+function Table({ data, setData }) {
     const [isModalOpen, setModalOpen] = useState(false);
-    const [selectedRow, setSelectedRow] = useState(null); // To store the selected row data
-    console.log('🚀 ~ Table ~ selectedRow:', selectedRow);
+    const [selectedRow, setSelectedRow] = useState({});
 
     const columns = [
         {
@@ -30,7 +30,7 @@ function Table({ data }) {
             render: (data, type, row) =>
                 `<div style="display: flex; align-items: center;">
                     <img
-                        src="${row.img}"
+                        src="${row.img || images.noImage}"
                         alt="Avatar"
                         style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;"
                     />
@@ -82,10 +82,9 @@ function Table({ data }) {
 
     const handleEditClick = (rowId) => {
         const rowData = data.filter((row) => {
-            console.log(row.id);
             return Number(row.id) === rowId;
         });
-        setSelectedRow(rowData);
+        setSelectedRow(rowData[0]);
         setModalOpen(true);
     };
 
@@ -108,7 +107,7 @@ function Table({ data }) {
                     ordering: false,
                     lengthChange: false,
                     info: true,
-                    pageLength: 3,
+                    pageLength: 4,
                     language: {
                         info: '_TOTAL_ results',
                     },
@@ -119,6 +118,7 @@ function Table({ data }) {
                 isOpen={isModalOpen}
                 setIsOpen={setModalOpen}
                 rowData={selectedRow}
+                setDataParent={setData}
             />
         </>
     );

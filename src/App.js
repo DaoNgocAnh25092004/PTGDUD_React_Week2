@@ -1,5 +1,7 @@
 import { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { publicRoutes } from '~/routes';
 import DefaultLayout from '~/Layouts';
@@ -8,6 +10,7 @@ function App() {
     return (
         <Router>
             <div className="App">
+                <ToastContainer />
                 <Routes>
                     {publicRoutes.map((route, index) => {
                         let Layout = DefaultLayout;

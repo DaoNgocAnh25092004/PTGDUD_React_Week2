@@ -25,12 +25,6 @@ function Dashboard() {
         fetch('https://67eca9a6aa794fb3222e5fbe.mockapi.io/user')
             .then((res) => res.json())
             .then((data) => {
-                const statuses = ['New', 'In-progress', 'Completed'];
-                data.forEach((item) => {
-                    item.status =
-                        statuses[Math.floor(Math.random() * statuses.length)];
-                });
-
                 setTable(data);
             });
     }, []);
@@ -62,7 +56,7 @@ function Dashboard() {
                 </div>
             </div>
 
-            <Table data={table} />
+            <Table data={table} setData={setTable} />
         </>
     );
 }
