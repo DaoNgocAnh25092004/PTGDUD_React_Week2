@@ -5,7 +5,6 @@ import 'datatables.net-select-dt';
 
 import './Table.css';
 import EditTable from '~/components/EditTable';
-import images from '~/assets/images';
 
 DataTable.use(DT);
 
@@ -30,7 +29,7 @@ function Table({ data, setData }) {
             render: (data, type, row) =>
                 `<div style="display: flex; align-items: center;">
                     <img
-                        src="${row.img || images.noImage}"
+                        src="${row.img}"
                         alt="Avatar"
                         style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;"
                     />

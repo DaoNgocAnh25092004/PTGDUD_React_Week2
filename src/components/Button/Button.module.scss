@@ -73,6 +73,13 @@
         border-color: rgb(250, 72, 134);
         color: rgb(250, 72, 134);
         background: var(--white-color);
+        svg {
+            color: rgb(250, 72, 134);
+        }
+    }
+
+    svg {
+        color: var(--white-color);
     }
 }
 
