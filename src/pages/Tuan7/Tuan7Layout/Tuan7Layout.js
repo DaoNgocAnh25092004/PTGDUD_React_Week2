@@ -4,6 +4,7 @@ import Header from '../Components/Header';
 import Sidebar from '../Components/SideBar';
 import Content from '../Components/Content';
 import Overview from '../Components/Overview/Overview';
+import Footer from '../Components/Footer';
 
 const cx = classNames.bind(styles);
 
@@ -15,7 +16,7 @@ function Tuan7Layout({ children }) {
                 <Sidebar />
                 <Overview />
                 <Content children={children} />
-                <footer className={cx('footer')}></footer>
+                <Footer />
             </div>
         </>
     );

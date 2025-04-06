@@ -18,6 +18,8 @@ const images = {
     star5: require('~/assets/images/Star/star5.png'),
     home: require('~/assets/images/home.png'),
     logo7: require('~/assets/images/logo-tuan7.png'),
+    group: require('~/assets/images/Group.png'),
+    visilyLogo: require('~/assets/images/Visily-logo.svg'),
 };
 
 export default images;

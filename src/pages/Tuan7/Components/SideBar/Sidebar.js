@@ -26,7 +26,6 @@ function Sidebar() {
                     <Image src={images.logo7} alt="Logo" />
                 </div>
 
-                {/* Menu */}
                 <Menu>
                     <MenuItem
                         title="Dashboard"
@@ -64,6 +63,16 @@ function Sidebar() {
                         icon={<FontAwesomeIcon icon={faCode} />}
                     />
                 </Menu>
+
+                <div className={cx('box-info')}>
+                    <Image
+                        src={images.group}
+                        alt="Avatar"
+                        className={cx('avatar')}
+                    />
+
+                    <button>Try now</button>
+                </div>
             </div>
         </>
     );

@@ -106,7 +106,7 @@ function Table({ data, setData }) {
                     ordering: false,
                     lengthChange: false,
                     info: true,
-                    pageLength: 4,
+                    pageLength: 3,
                     language: {
                         info: '_TOTAL_ results',
                     },
