@@ -8,6 +8,7 @@ import Modal from '../Modal';
 import Image from '../Image';
 import images from '~/assets/images';
 import { toast } from 'react-toastify';
+import uploadToCloudinary from '~/Provider/UploadToCloudinary';
 
 const cx = classNames.bind(styles);
 
@@ -27,11 +28,26 @@ function EditTable({ isOpen, setIsOpen, rowData, setDataParent }) {
         setEditField(field);
     };
 
-    const handleChange = (e, field) => {
-        setEditedData((prev) => ({
-            ...prev,
-            [field]: e.target.value,
-        }));
+    const handleChange = async (e, field) => {
+        if (field === 'img') {
+            const file = e.target.files[0];
+            if (file) {
+                try {
+                    const url = await uploadToCloudinary(file);
+                    setEditedData((prev) => ({
+                        ...prev,
+                        [field]: url,
+                    }));
+                } catch (err) {
+                    toast.error('Upload ảnh thất bại!');
+                }
+            }
+        } else {
+            setEditedData((prev) => ({
+                ...prev,
+                [field]: e.target.value,
+            }));
+        }
     };
 
     const handleTempSave = (field) => {
@@ -96,7 +112,6 @@ function EditTable({ isOpen, setIsOpen, rowData, setDataParent }) {
                         <input
                             type="file"
                             className={cx('input-file')}
-                            value={editedData.img}
                             onChange={(e) => handleChange(e, 'img')}
                         />
                     ) : (

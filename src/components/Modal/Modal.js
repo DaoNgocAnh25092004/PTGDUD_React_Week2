@@ -18,7 +18,11 @@ function Modal({ isOpen, onClose, children, className }) {
     return (
         <div className={cx('modal-overlay')} onClick={handleOverlayClick}>
             <div className={cx('modal-content', className)}>
-                <FontAwesomeIcon icon={faClose} className={cx('close-button')} onClick={onClose} />
+                <FontAwesomeIcon
+                    icon={faClose}
+                    className={cx('close-button')}
+                    onClick={onClose}
+                />
                 {children}
             </div>
         </div>
